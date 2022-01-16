@@ -13,7 +13,7 @@ FROM
         JOIN
     InvoiceLine il ON i.InvoiceId = il.InvoiceId
 GROUP BY 3 , 2;
-
+------------------------------------------------------------------------
 /* Query 2 */Which employee sold the most tracks in each year?
 SELECT
     MAX(No_of_tracks) Tracks_sold, EmployeeId, Name, Year
@@ -30,7 +30,7 @@ FROM
     JOIN InvoiceLine il ON i.InvoiceId = il.InvoiceId
     GROUP BY 4 , 2)
 GROUP BY 4;
-
+------------------------------------------------------------------------
 /* Query 3 */What are the playlists whose byte size is less than average ?
 SELECT
     PlaylistId, Name, Bytes
@@ -51,7 +51,7 @@ FROM
 WHERE
     Bytes & amp;lt; avg_bytes
 ORDER BY 3 DESC;
-
+------------------------------------------------------------------------
 /* Query 4 */What is the highest Media Type sales?
 SELECT
     m.Name Media_Type,
